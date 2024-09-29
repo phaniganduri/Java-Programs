@@ -1,0 +1,161 @@
+# First form of interface implementation:
+interface A
+{
+void display();
+}
+class B implements A
+{
+public void display()
+{
+System.out.println("B's method");
+}
+}
+class C extends B
+{
+public void callme()
+{
+System.out.println("C's method");
+}
+}
+class interfacedemo
+{
+public static void main(String args[])
+{
+C c1=new C();
+c1.display();
+c1.callme();
+}
+}
+#OUT-PUT:
+B's method
+C's method
+
+
+#Second form of interface implementation:
+interface D
+{
+void display();
+}
+interface E extends D
+{
+void show();
+}
+class A
+{
+void callme()
+{
+System.out.println("This is in callme method");
+}
+}
+class B extends A implements E
+{
+public void display()
+{
+System.out.println("This is in display method");
+}
+public void show()
+{
+System.out.println("This is in show method");
+}
+}
+class C extends B
+{
+void call()
+{
+System.out.println("This is in call method");
+}
+}
+class interfacedemo
+{
+public static void main(String args[])
+{
+C c1=new C();
+c1.display();
+c1.show();
+c1.callme();
+c1.call();
+}
+}
+#OUT-PUT:
+This is in display method
+This is in show method This
+is in callme methodThis is in
+call method
+
+
+# Third form of interface implementation:
+interface A
+{
+void display();
+}
+class B implements A
+{
+public void display()
+{
+System.out.println("This is in B's method");
+}
+}
+class C implements A
+{
+public void display()
+{
+System.out.println("This is C's method");
+}
+}
+class interfacedemo
+{
+public static void main(String args[])
+{
+B b1=new B();C
+c1=new C();
+b1.display();
+c1.display();
+}
+}
+#OUT-PUT:
+This is in B's method
+This is C's method
+
+
+#Fourth form of interface implementation:
+interface A
+{
+void display();
+}
+interface B
+{
+void callme();
+}
+interface C extends A,B
+{
+void call();
+}
+class D implements C
+{
+public void display()
+{
+System.out.println("interface A");
+}
+public void callme()
+{
+System.out.println("interface B");
+}
+public void call()
+{
+System.out.println("interface C");
+}
+}
+class interfacedemo
+{
+public static void main(String args[])
+{
+D d1=new D();
+d1.display();
+d1.callme();
+d1.call();
+}
+}
+#OUT-PUT:
+interface A
+interface B
+interface C
