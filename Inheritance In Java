@@ -1,0 +1,105 @@
+#Implementing Single Inheritance:
+class A
+{
+A()
+{
+System.out.println("Inside A's Constructor");
+}
+}
+class B extends A
+{
+B()
+{
+System.out.println("Inside B's Constructor");
+}
+}
+class singledemo
+{
+public static void main(String args[])
+{
+B b1=new B();
+}
+}
+#OUT-PUT:
+Inside A's Constructor
+Inside B's Constructor
+
+# Multi level Inheritance:
+class A
+{
+A()
+{
+System.out.println("Inside A's Constructor");
+}
+}
+class B extends A
+{
+B()
+{
+System.out.println("Inside B's Constructor");
+}
+}
+class C extends B
+{
+C()
+{
+System.out.println("Inside C's Constructor");
+}
+}
+class multidemo
+{
+public static void main(String args[])
+{
+C c1=new C();
+}
+}
+#OUT-PUT:
+Inside A's Constructor
+Inside B's Constructor
+Inside C's Constructor
+
+#Abstract Class:
+abstract classshape
+{
+abstract double area();
+}
+class rectangle extends shape
+{
+double l=12.5,b=2.5;
+double area()
+{
+return l*b;
+}
+}
+class triangle extends shape
+{
+double b=4.2,h=6.5;
+double area()
+{
+return 0.5*b*h;
+}
+}
+class square extends shape
+{
+double s=6.5;
+double area()
+{
+return 4*s;
+}
+}
+class shapedemo
+{
+public static void main(String[] args)
+{
+rectangle r1=new rectangle();
+triangle t1=new triangle(); square
+s1=new square();
+System.out.println("The area of rectangle is: "+r1.area());
+System.out.println("The area of triangle is: "+t1.area());
+System.out.println("The area ofsquare is: "+s1.area());
+}
+}
+#OUT-PUT:
+The area of rectangle is: 31.25The
+area of triangle is: 13.65 The area
+of square is: 26.0
